@@ -1,5 +1,5 @@
 <head>
-  <title>SVG HTML5</title>
+  <title>SVG in HTML5</title>
 </head>
 <body>
   <h3>Import from &lt;img&gt; tag</h3>
@@ -17,7 +17,7 @@
   <img style='border: 1px solid' width='10' src='box.svg'/>
 
   
-  <h3>Autosize SVG &lt;img&gt;</h3>
+  <h5>Autosize SVG &lt;img&gt;</h5>
   <img id='autosized' style='border: 1px solid' src='box.svg'/>
   <script type="text/javascript">
     var svg = document.getElementById('autosized');
@@ -31,5 +31,6 @@
          http://stackoverflow.com/a/14363879
        </a> but it failes, because &lt;img&gt; doesn't provide access to the
        structure of underlying &lt;svg&gt; data.</div>
-
+  <div>Conclusion: use &lt;img&gt; only if you know real &lt;svg&gt;
+  size and don't need to change SVG content dynamically.</div>
 </body>
