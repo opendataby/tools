@@ -1,7 +1,17 @@
 <head>
   <title>SVG in HTML5</title>
+  <style>
+    .flexbox { display: flex; }
+    .flexbox > div {
+      width: 50%;
+      margin-left: 1em; margin-right: 1em;
+      /* border: 1px solid black; */
+    }
+  </style>
 </head>
 <body>
+<div class="flexbox">
+ <div>
   <h3>Import from &lt;img&gt; tag</h3>
   <img style='border: 1px solid' src='box.svg'/>
   <div>Notes:
@@ -29,8 +39,16 @@
   <div>This example tries trick explained in
        <a href="http://stackoverflow.com/a/14363879">
          http://stackoverflow.com/a/14363879
-       </a> but it failes, because &lt;img&gt; doesn't provide access to the
+       </a> but it fails, because &lt;img&gt; doesn't provide access to the
        structure of underlying &lt;svg&gt; data.</div>
   <div>Conclusion: use &lt;img&gt; only if you know real &lt;svg&gt;
   size and don't need to change SVG content dynamically.</div>
+ </div><!-- first box -->
+
+ <div>
+    <h3>Import with &lt;object&gt; tag</h3>
+    <object style="border: 1px solid" type='image/svg+xml' data="box.svg"/>
+ </div><!-- second box -->
+
+</div>
 </body>
