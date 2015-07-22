@@ -9,7 +9,19 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- define utility functions -->
+  <script type="text/javascript">
+  function fixSVGsize(id) {
+    var svg = document.getElementById(id);
+    //console.log(svg.width);
+    var bbox = svg.getBBox();
+    svg.setAttribute('width', bbox.x + bbox.width  + 'px');
+    svg.setAttribute('height', bbox.y + bbox.height + 'px');
+  }
+  </script>
+
 <div class="flexbox">
  <div>
   <h3>Import from &lt;img&gt; tag</h3>
@@ -28,14 +40,8 @@
 
   
   <h5>Autosize SVG &lt;img&gt;</h5>
-  <img id='autosized' style='border: 1px solid' src='box.svg'/>
-  <script type="text/javascript">
-    var svg = document.getElementById('autosized');
-    console.log(svg.width);
-    var bbox = svg.getBBox();
-    svg.setAttribute('width', bbox.x + bbox.width  + 'px');
-    svg.setAttribute('height',bbox.x + bbox.height + 'px');
-  </script>
+  <img id='img-svg' style='border: 1px solid' src='box.svg'/>
+  <script>fixSVGsize('img-svg');</script>
   <div>This example tries trick explained in
        <a href="http://stackoverflow.com/a/14363879">
          http://stackoverflow.com/a/14363879
