@@ -53,7 +53,24 @@
 
  <div>
     <h3>Import with &lt;object&gt; tag</h3>
-    <object style="border: 1px solid" type='image/svg+xml' data="box.svg"/>
+    <object style="border: 1px solid" data="box.svg"></object>
+    <div>Notes:
+      <ul>
+        <li>300x150 bounding box indicates the same problem with autodetecting
+        height/width of an SVG file.</li>
+        <li>In Firefox there is
+          <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=608812">the bug</a>
+          that adds 1px space between &lt;object&gt; border and SVG.</li>
+        <li>Short &lt;object/&gt; tag doesn't work.</li>
+      </ul>
+    </div>
+
+    <h5>Setting width in  &lt;svg&gt; </h5>
+    <object style='border: 1px solid' data='box.1.width.svg'></object>
+
+    <h5>Setting width in  &lt;img&gt; </h5>
+    <object style='border: 1px solid' width='10' data='box.svg'></object>
+
  </div><!-- second box -->
 
 </div>
