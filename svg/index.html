@@ -1,6 +1,8 @@
 <head>
   <title>SVG in HTML5</title>
   <style>
+    .header { text-transform: uppercase; }
+    
     .flexbox { display: flex; }
     .flexbox > div {
       width: 50%;
@@ -22,9 +24,11 @@
   }
   </script>
 
+  <header>Experiments with Embedding SVG</header>
+  
 <div class="flexbox">
  <div>
-  <h3>Import from &lt;img&gt; tag</h3>
+  <h3>&lt;img src=&gt; tag</h3>
   <img style='border: 1px solid' src='box.svg'/>
   <div>Notes:
     <ul>
@@ -52,7 +56,7 @@
  </div><!-- first box -->
 
  <div>
-    <h3>Import with &lt;object&gt; tag</h3>
+    <h3>&lt;object data=&gt; tag</h3>
     <object style="border: 1px solid" data="box.svg"></object>
     <div>Notes:
       <ul>
