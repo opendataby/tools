@@ -1,3 +1,5 @@
+<!doctype html>
+
 <head>
   <title>SVG in HTML5</title>
   <style>
@@ -19,7 +21,7 @@
 
 <body>
   <!-- define utility functions -->
-  <script type="text/javascript">
+  <script>
   function fixSVGsize(id) {
     var svg = document.getElementById(id);
     //console.log(svg.width);
@@ -34,7 +36,7 @@
 <div class="flexbox">
  <div>
   <h3>&lt;img src=&gt; tag</h3>
-  <img style='border: 1px solid' src='box.svg'/>
+  <img style='border: 1px solid' src='box.svg' alt='no size in svg or img'/>
   <div>Notes:
     <ul>
       <li>Browser can not autodetect height/width of an SVG file and sets 
@@ -42,14 +44,14 @@
     </ul></div>
 
   <h5>Setting width in  &lt;svg&gt; </h5>
-  <img style='border: 1px solid' src='box.1.width.svg'/>
+  <img style='border: 1px solid' src='box.1.width.svg'  alt='no size in img or svg'/>
 
   <h5>Setting width in  &lt;img&gt; </h5>
-  <img style='border: 1px solid' width='10' src='box.svg'/>
+  <img style='border: 1px solid' width='10' src='box.svg' alt='no size in img, svg width=10'/>
 
   
   <h5>Autosize SVG &lt;img&gt;</h5>
-  <img id='img-svg' style='border: 1px solid' src='box.svg'/>
+  <img id='img-svg' style='border: 1px solid' src='box.svg' alt='img sized by js'/>
   <script>fixSVGsize('img-svg');</script>
   <div>This example tries trick explained in
        <a href="http://stackoverflow.com/a/14363879">
