@@ -8,4 +8,4 @@
   до свойств элементов (например, чтобы поменять цвета или таки узнать
   реальный размер)
 
-Код эксперимента на http://tools.opendata.by/svg/index.html
+Код эксперимента на https://tools.opendata.by/svg/index.html
